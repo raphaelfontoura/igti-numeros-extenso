@@ -1,4 +1,9 @@
-window.addEventListener("load", start);
+// window.addEventListener("load", start);
+/*
+Ao utilizar a palavra chave defer na tag script do html, 
+o navegador vai invocar o script após todo o DOM estar carregado.
+Mas precisa lembrar de chamar a função start() ao final do arquivo javascript.
+*/
 
 function start() {
     const slider = document.querySelector("#slider");
@@ -98,3 +103,4 @@ function numberToText(number) {
 
 }
 
+start();
