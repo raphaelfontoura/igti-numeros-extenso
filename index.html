@@ -10,23 +10,25 @@
 </head>
 <body>
     <div class="container">
-        <h1>Números por extenso</h1>
+        <h1 class="center">Números por extenso</h1>
         <div>
             <p>Escolha um número entre 0 e 999:</p>
-            <p class="range-field">
-                <input type="range" id="slider" min="0" max="999">
-            </p>
+            <div class="range-field">
+                <input type="range" id="slider" min="0" max="999" value=0>
+            </div>
         </div>
-        <div>
-            <p>Número atual:</p>
-            <input type="number" id="number" disabled>
-            <p>Número por extenso:</p>
-            <input type="text" id="text_number" disabled>
+        <div class="input-field">
+            <input type="number" id="number" disabled readonly value="0">
+            <label for="number"> Número atual: </label>
+        </div>
+        <div class="input-field">
+            <input type="text" id="text_number" disabled readonly value="zero">
+            <label for="text_number"> Número por extenso: </label>
         </div>
     </div>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
+
     <script src="js/script.js"></script>
     
 </body>
