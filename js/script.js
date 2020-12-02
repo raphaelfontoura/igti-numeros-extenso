@@ -31,19 +31,16 @@ function numberToText(number) {
             centenas = number.substring(0, 1);
             dezenas = number.substring(1, 2);
             unidades = number.substring(2);
-            console.log(`centenas: ${centenas}, dezenas: ${dezenas}, unidades:${unidades}`);
             break;
         case 2:
             centenas = 0;
             dezenas = number.substring(0, 1);
             unidades = number.substring(1);
-            console.log(`centenas: ${centenas}, dezenas: ${dezenas}, unidades:${unidades}`);
             break;
         case 1:
             centenas = 0;
             dezenas = 0;
             unidades = number;
-            console.log(`centenas: ${centenas}, dezenas: ${dezenas}, unidades:${unidades}`);
             break;
         default:
             break;
@@ -54,8 +51,6 @@ function numberToText(number) {
     unidades = parseInt(unidades);
 
     if (centenas === 0 && dezenas <= 10) {
-        
-        console.log("número de 1 a 19");
         return extensoDe1a19(dezenas+unidades);
     }
 
@@ -63,8 +58,7 @@ function numberToText(number) {
         if (unidades === 0){
             return extensoDe20a90(dezenas);
         }
-        return extensoDe20a90(dezenas) + " e " + extensoDe1a19(unidades);
-        // console.log(extenso);
+        return `${extensoDe20a90(dezenas)} e ${extensoDe1a19(unidades)}`;
     }
 
     if (centenas >= 1) {
